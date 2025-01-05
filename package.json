@@ -4,13 +4,16 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "ts-node-dev ./src/main.ts",
-    "start:prod": "ts-node-dev ./dist/main.js",
+    "start:prod": "node ./dist/main.js",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.{js,ts}\"",
     "lint": "eslint . --ext .js,.ts --fix",
     "prepare": "husky install"
   },
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "16.4.7",
+    "joi": "17.13.3"
+  },
   "devDependencies": {
     "@commitlint/cli": "19.6.1",
     "@commitlint/config-conventional": "19.6.0",
